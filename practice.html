@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,td,tr,th {
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <h1>About that product</h1>
+
+  <script>
+
+    var dt=JSON.parse(localStorage.getItem("data"));
+    console.log(dt);
+      var tab=document.createElement("table");
+      var tr=document.createElement("tr");
+      var td1=document.createElement("td");
+      td1.innerText=dt.id;
+      var td2=document.createElement("td");
+      td2.innerText=dt.title;
+      var td3=document.createElement("td");
+      td3.innerText=dt.price;
+      var td4=document.createElement("td");
+      td4.innerText=dt.category;
+      var td5=document.createElement("td");
+      td5.innerText=dt.description;
+      var td6=document.createElement("td");
+       var image=document.createElement("img");
+       image.src=dt.image;
+       image.style.width="100px"
+       image.style.height="100px"
+
+
+
+
+
+      tr.appendChild(td1)
+      tr.appendChild(td2)
+      tr.appendChild(td3)
+      tr.appendChild(td4)
+      tr.appendChild(td5)
+      td6.appendChild(image);
+      tr.appendChild(td6)
+      tab.appendChild(tr);
+    
+    document.body.appendChild(tab)
+
+  
+  </script>
+  
+</body>
+</html>
